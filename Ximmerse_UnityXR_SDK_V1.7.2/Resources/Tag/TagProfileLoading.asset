@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfbe5a6da72ae75448ccd5fe782152a2, type: 3}
+  m_Name: TagProfileLoading
+  m_EditorClassIdentifier: 
+  _beacon: 1
+  _liBeacon: 0
+  _topoTag: 1
+  _singleCard: 0
+  _gun: 0
+  _liBeaconType: 0
+  _topoTagSize: 0
+  _guntype: 0
+  _singleSize: 0
+  Marker: 
+  m_leftCalibraFilePath: 
+  m_rightCalibraFilePath: 
