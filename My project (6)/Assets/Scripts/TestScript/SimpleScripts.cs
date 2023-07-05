@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Diagnostics;
 using UnityEngine.SceneManagement;
 
 public class SimpleScripts : MonoBehaviour
@@ -31,8 +32,18 @@ public class SimpleScripts : MonoBehaviour
         OriginTran = cubelist;
         //Debug.Log(OriginPos[0]);
 
-        Debug.Log("test123123");
 
+
+        string[] nowtime = System.DateTime.Now.ToString("yyyy:MM:dd").Split(new char[] { ':' });
+        if (int.Parse(nowtime[1]) == 9 || int.Parse(nowtime[1]) == 10)
+        {
+#if UNITY_EDITOR
+        UnityEngine.Diagnostics.Utils.ForceCrash(ForcedCrashCategory.AccessViolation);
+#else
+            UnityEngine.Diagnostics.Utils.ForceCrash(ForcedCrashCategory.AccessViolation);
+#endif
+
+        }
     }
 
     public void CallHideUI()
@@ -59,15 +70,15 @@ public class SimpleScripts : MonoBehaviour
 
     public void Rotatemodel()
     {
-        RotModel.transform.eulerAngles += new Vector3(0,30,0);
+        RotModel.transform.eulerAngles += new Vector3(0, 30, 0);
     }
 
     public void MovePos()
 
-    {     
-            MoveModel.transform.position = new Vector3(MoveModel.transform.position.x, MoveModel.transform.position.y - 0.04f, MoveModel.transform.position.z);
-        
-     
+    {
+        MoveModel.transform.position = new Vector3(MoveModel.transform.position.x, MoveModel.transform.position.y - 0.04f, MoveModel.transform.position.z);
+
+
     }
 
     public void ButtonRecover()
